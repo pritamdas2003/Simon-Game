@@ -16,17 +16,21 @@ function nextSequence() {
     userClickedPattern = [];
     level++;
     $("#level-title").text("Level " + level);
+    $("#status").text("Wait...");
     var random = Math.floor(Math.random() * 4);
     var randomChosenColour = buttonColors[random];
     gamePattern.push(randomChosenColour);
-    // $("#" + randomChosenColour).fadeOut(100).fadeIn(100);
-    // playSound(randomChosenColour);
     var i = 0;
     (function loop() {
         $("#" + gamePattern[i]).fadeOut(100).fadeIn(100);
         playSound(gamePattern[i]);
         if (++i < gamePattern.length) {
             setTimeout(loop, 1000);
+        }
+        if (i === gamePattern.length) {
+            setTimeout(function () {
+                $("#status").text("Your Turn");
+            }, 1000);
         }
     })();
 }
@@ -49,7 +53,8 @@ function checkAnswer(currLevel) {
         }
     }
     else {
-        $("#level-title").html("GAME OVER <p>Press Any Key to Restart</p>");
+        $("#level-title").html("GAME OVER");
+        $("#status").html("Press Any Key to Restart");
         playSound("wrong");
         $("body").addClass("game-over");
         setTimeout(function () {
