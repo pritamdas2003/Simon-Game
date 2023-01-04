@@ -1,13 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
 body {
   text-align: center;
   background-color: #011F3F;
 }
 
 #level-title {
-  font-family: 'Press Start 2P', cursive;
-  font-size: 3rem;
-  margin: 4.5%;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 4rem;
+  margin: 2.3%;
   color: #FEF2BF;
+}
+
+#status {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 45px;
+  margin: 2%;
+  color: #FFF;
 }
 
 .container {
@@ -17,7 +25,7 @@ body {
 }
 
 .btn {
-  margin: 25px;
+  margin: 10px;
   display: inline-block;
   height: 200px;
   width: 200px;
