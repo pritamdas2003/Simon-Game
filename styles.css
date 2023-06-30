@@ -1,20 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
 body {
   text-align: center;
-  background-color: #011F3F;
+  background-color: #13005A;
 }
 
 #level-title {
   font-family: 'Ubuntu', sans-serif;
   font-size: 4rem;
-  margin: 2.3%;
-  color: #FEF2BF;
+  margin: 2%;
+  color: #fff;
 }
 
 #status {
   font-family: 'Ubuntu', sans-serif;
   font-size: 45px;
-  margin: 2%;
+  margin: 1%;
   color: #FFF;
 }
 
